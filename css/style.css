@@ -1,0 +1,55 @@
+@import "null.css";
+.wrapper{
+	background-color: #333;
+}
+.wrapper__circle{
+	width: 400px;
+	margin: 100px auto 0px;
+}
+.circle {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	position: relative;
+}
+.circle_back {
+	background-color: red;
+	animation: col 3s linear infinite;
+}
+.circle_front {
+	background-color: #333;
+	width: 370px;
+	height: 370px;
+	transform: translate(15px, 15px);
+}
+.circle_show{
+	width: 400px;
+	height:400px;
+	border-radius: 0%;
+	background: linear-gradient(0deg, rgba(255,255,255,0) 2%, rgba(51,51,51,1) 30%, rgba(51,51,51,1) 100%);
+	position: absolute;
+	top: 0px;
+	animation: rot 3s linear infinite;
+}
+@keyframes rot{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(720deg);
+	}
+}
+@keyframes col{
+	0%{
+		background-color: rgb(13, 0, 255);
+	}
+	33.3%{
+		background-color: rgb(255, 0, 0);
+	}
+	66.6%{
+		background-color: rgb(0, 255, 4);
+	}
+	100%{
+		background-color: rgb(13, 0, 255);
+	}
+}
